@@ -1,0 +1,17 @@
+.databricks/
+build/
+dist/
+__pycache__/
+*.pyc
+.env
+*.egg-info
+.venv/
+.DS_Store
+.ipynb_checkpoints/
+mlruns/
+scratch/**
+**/explorations/**
+.vscode/
+.idea/
+.pytest_cache/
+.pytest_tmp/

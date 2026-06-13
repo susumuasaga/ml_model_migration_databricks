@@ -1,0 +1,18 @@
+Legacy Environment: {
+    Legacy Model -> MLflow Model <-> Model Artifacts
+    Model Artifacts: {
+        "Trained State\n(.npz, JSON)"
+        "Inference Code\n(PythonModel)"
+    }
+    Legacy Model -> Validate\nPrediction\nParity <- MLflow Model
+}
+Legacy Environment.Model Artifacts -> Databricks Environment.Model Artifacts: export
+Databricks Environment: {
+    Model Artifacts: {
+        "Trained State\n(.npz, JSON)"
+        "Inference Code\n(PythonModel)"
+    }
+    Model Artifacts -> MLflow Model <-> Model Registry -> SparkUDF Inference
+    Model Registry: "Model Registry\n(Unity Catalog)"
+    SparkUDF Inference: "SparkUDF\nInference"
+}
